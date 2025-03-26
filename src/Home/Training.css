@@ -1,0 +1,62 @@
+/* Training */
+
+@media (max-width:426px){
+  .group:hover .child {
+    filter: blur(2px); /* Apply blur effect */
+    transform: scale(1.05); /* Apply scaling effect */
+    transition: all 0.3s ease; /* Add transition for smooth effect */
+  }
+  .group-hover .box1 {
+    /* position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 15%; */
+    background-color: #e60000; /* red-600 color */
+    transform: skewY(-18deg); /* Apply skewY transformation */
+    transform-origin: top left; /* Set origin for skewing */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    transform: scale(0); /* Initially, scale it down to 0 */
+  }
+  
+  .group-hover:hover .box1 {
+    transform: scale(1) skewY(-18deg); /* On hover, scale to 100% and keep the skew */
+  }
+
+  .group-hover .box2 {
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;  */
+    background-color: #001e3c; /* blue-950 color */
+    transform: skewY(-11deg); /* Apply skewY transformation */
+    transform-origin: bottom right; /* Set the origin for skewing */
+    transition: all 0.3s ease; /* Smooth transition for all properties */
+    transform: scale(0); /* Initially, scale it down to 0 */
+  }
+  
+  .group-hover:hover .box2 {
+    transform: scale(1) skewY(-11deg); /* On hover, scale to 100% and keep the skew */
+  }
+
+  .group-hover .box3 {
+    /* position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column; 
+    gap: 1rem; 
+    padding: 0.25rem; 
+    margin: 0.25rem;  */
+    opacity: 0; 
+    transition: all 0.3s ease; 
+  }
+  
+  .group-hover:hover .box3 {
+    opacity: 1; 
+  }
+  
+  
+  
+}
