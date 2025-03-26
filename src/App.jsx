@@ -9,6 +9,7 @@ import MainHome from "./Home/MainHome"
 import Download from "./Affiliation/Download"
 import Result from "./Affiliation/Result"
 import Affiliation from "./Affiliation/Affiliation"
+
 function App() {
   return (
     <div className="over-flow-x-hidden w-[100%]">

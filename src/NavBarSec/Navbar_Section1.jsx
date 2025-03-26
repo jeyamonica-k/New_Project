@@ -4,8 +4,12 @@ import Navbar from '../NavBarSec/Navbar'
 import Menubar from '../NavBarSec/Menubar'
 
 import { useState, useEffect } from "react";
+import SideNav from './SideNav';
+
 
 function Navbar_Section1() {
+
+ 
 const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -24,7 +28,7 @@ const [isScrolled, setIsScrolled] = useState(false);
   }, []);
   return (
     <>
-    <div className='flex items-center justify-between shadow-lg  sticky top-0 z-70 bg-white max-w-full'>
+    <div className='flex items-center justify-between shadow-lg  sticky top-0 z-50 bg-white max-w-full'>
     <div>
       <img src={one} alt="logo"  className= {` md:w-40 transition-all duration-800 ${
             isScrolled ? "w-20 p-0 m-0  " : " w-32 lg:w-44 " 
@@ -34,8 +38,9 @@ const [isScrolled, setIsScrolled] = useState(false);
     <Navbar isScrolled={isScrolled}></Navbar>
     <Menubar></Menubar>
    
+   
     </div>
-    {/* <Hero></Hero> */}
+    
    
     </>
 

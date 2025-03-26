@@ -8,6 +8,11 @@
   display: block;
 }
 
+/*Menubar */
+.menubar-transition {
+  transition: transform 0.5s ease-in-out !important;
+}
+
 /* Scrolling */
 
 @keyframes scrollLeft {

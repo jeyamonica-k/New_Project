@@ -7,7 +7,7 @@ function AboutUs() {
    <div className='relative'>
     <img src={aboutimg} alt="AboutUs" className=' h-96 w-full md:h-screen ' />
     <div className='border-4 border-blue-950 p-3 bg-white w-fit absolute bottom-0 left-0 md:bottom-72 md:left-20 lg:left-80  lg:p-4  '>
-      <p className='text-xl font-bold text-red-700 md:text-2xl lg:text-4xl'>Indian Council Of Vocational And Technical Education</p>
+      <p className='text-[6px]  font-bold text-red-700 md:text-2xl lg:text-4xl'>Indian Council Of Vocational And Technical Education</p>
     </div>
    </div>
    <div className='flex justify-center md:m-5 lg:mx-60'>
