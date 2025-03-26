@@ -1,0 +1,79 @@
+@import "tailwindcss";
+
+body{
+  font-family: "Poppins", sans-seri;
+ width: 100vw;
+ overflow-x: hidden;
+  
+}
+
+/* body, html{
+  overflow-x: hidden;
+  width: 100vw;
+} */
+
+
+
+/* ImageSlider */
+
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+
+
+/* Correct format for escaping Tailwind classes in CSS */
+
+/* For screens with width 768px or less (mobile/tablet devices) */
+@media (max-width: 768px) {
+  /* Make the image and text sections take full width on small screens */
+  .md\:w-\[40\%\] {
+    width: 100% !important; /* Image section takes full width on mobile */
+  }
+  
+  .md\:w-\[60\%\] {
+    width: 100% !important; /* Text section also takes full width on mobile */
+  }
+
+  /* Adjust the height of the images for smaller screens */
+  .md\:h-\[420px\] {
+    height: auto !important; /* Make image height auto to scale on mobile */
+  }
+
+  .lg\:h-\[650px\] {
+    height: auto !important; /* Make image height auto to scale on mobile */
+  }
+
+  /* Adjust translate for smaller screens */
+  .translate-x-\[10\%\] {
+    transform: translateX(0%) !important; /* Prevent image from being pushed off-screen on small screens */
+  }
+
+  .translate-x-full {
+    transform: translateX(0%) !important; /* Keep the text section visible */
+  }
+
+  /* Optional: Adjust font sizes for smaller screens */
+  .text-xl {
+    font-size: 1.25rem !important; /* Adjust font size for mobile */
+  }
+
+  .lg\:text-4xl {
+    font-size: 2.25rem !important; /* Adjust font size for large screens */
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem !important; /* Adjust font size for large screens */
+  }
+}
