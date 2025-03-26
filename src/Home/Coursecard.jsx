@@ -3,22 +3,28 @@ import one from "../images/affliation.png";
 import two from "../images/results.png";
 import three from "../images/downloads.png"
 import "../App.css"
-
+import { Link } from 'react-router-dom';
 const course_images=[
   {
     src:one,
     title:"Apply Affliation",
-    desc:"Enhance your institution's credentials - Apply for affiliation with us today!"
+    desc:"Enhance your institution's credentials - Apply for affiliation with us today!",
+    Link:"/Affliation",
+    btn:"Apply"
   },
   {
     src:two,
     title:"Results",
-    desc:"Access your academic results here and stay updated on your progress."
+    desc:"Access your academic results here and stay updated on your progress.",
+    Link:"/Result",
+    btn:"Results"
   },
   {
     src:three,
     title:"Downloads",
-    desc:"Download your certifications, hall tickets, and enrollment forms all in one place."
+    desc:"Download your certifications, hall tickets, and enrollment forms all in one place.",
+    Link:"/Download",
+    btn:"Downloads"
   }]
 
 function Coursecard() {
@@ -35,8 +41,8 @@ function Coursecard() {
         <img src={course_images[index].src} alt="Affliation_img" className=' w-[100%] h-[50%] rounded-t-md  lg:rounded-t-2xl  ' />
         <h1 className='text-[#192C57] font-bold text-xl my-1 md:text-2xl p-1'>{course_images[index].title}</h1>
         <p className='my-1 text-sm text-gray-800 md:text-base p-1'>"{course_images[index].desc}"</p>
-        <button className='bg-[#D94426] text-white font-medium border rounded-lg py-2 px-2.5 m-2 cursor-pointer
-         hover:bg-[#900000] md:mb-4'>Apply</button>
+       <Link to={course_images[index].Link}><button className='bg-[#D94426] text-white font-medium border rounded-lg py-2 px-2.5 m-2 cursor-pointer
+         hover:bg-[#900000] md:mb-4'>{course_images[index].btn}</button></Link>
          </div>
               </>)
 
