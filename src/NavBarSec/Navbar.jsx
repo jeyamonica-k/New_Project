@@ -19,9 +19,9 @@ function Navbar(props) {
     <Link><p  className={`hover:text-red-700 hover:cursor-pointer  ${ props.isScrolled ?"text-2xl font-medium":"text-normal"}`}>Procedure</p></Link>
     <div className=' absolute bg-[#192C57]  w-[300%]  m-1 p-3 z-50  border-transparent rounded-md lg:top-[70%] left-[-60%]  content'>
       <div className='flex flex-col gap-3'> 
-      <p className='text-xl  text-white hover:bg-[#D94426] p-2  border-transparent rounded-md'>Attestation</p>
-      <p className='text-xl  text-white hover:bg-[#D94426] p-2 border-transparent rounded-md'>Approval Procedure</p>
-      <p className='text-xl  text-white hover:bg-[#D94426] p-2 border-transparent rounded-md'>Sample Certificate</p>
+      <Link to={'/language'}><p className='text-xl  text-white hover:bg-[#D94426] p-2  border-transparent rounded-md'>Attestation</p></Link>
+      <Link to={'/approval'}><p className='text-xl  text-white hover:bg-[#D94426] p-2 border-transparent rounded-md'>Approval Procedure</p></Link>
+      <Link to={"/samplecertificate"}><p className='text-xl  text-white hover:bg-[#D94426] p-2 border-transparent rounded-md'>Sample Certificate</p></Link>
       </div>
     </div>
     </div>

@@ -12,6 +12,7 @@ import ten from "../images/sports_educationCD1.jpeg";
 import eleven from "../images/Computer_Eduction.png";
 import twelve from "../images/hospitalitymgmtfrond.jpeg";
 import thirteen from "../images/language_school.png";
+import { Link } from "react-router-dom";
 
 
 function Hero() {
@@ -20,66 +21,79 @@ function Hero() {
       src: one,
       title: "Child Education",
       desc: "Child care education emphasizes play-based learning, Montessori methods and Waldorf education using educational toys, books, crafts and musical instruments.",
+      link:'/childeducation'
     },
     {
       src: two,
       title: "Arts and Design",
       desc: "Explore our exquisite range of arts and design services, including intricate embroidery, bespoke saree designing, vibrant fabric painting and cozy wool knitting.",
+      link:'/artanddesign'
     },
     {
       src: three,
       title: "Health Sciences",
       desc: "Health Science covers medical research, diagnostics, patient care, public health and healthcare technology.",
+      link: '/healthscience'
     },
     {
       src: four,
       title: "Media and Communication",
       desc: "Media and Communication focus on journalism, digital media, public relations, advertising and interpersonal communication skills.",
+      link: '/mediaandcommunication'
     },
     {
       src: five,
       title: "Beautician Education",
       desc: "Beautician education equips students with essential skills in skincare, makeup, hair styling and nail care. Courses cover techniques, product knowledge.",
+      link: "/beautician"
     },
     {
       src: six,
       title: "Automobile Education",
       desc: "Automobile education covers vehicle mechanics, automotive technology, repair techniques, diagnostics and maintenance practices.",
+      link:"/automobile"
     },
     {
       src: seven,
       title: "Fire & Safety",
       desc: "Fire & Safety education involves fire prevention, emergency response, safety protocols, risk management and hazard assessment.",
+      link: "/firesafety"
     },
     {
       src: eight,
       title: "Agriculture Education",
       desc: "Agriculture education includes crop management, soil science, animal husbandry, sustainable farming practices and agricultural technology",
+      link:"/agriculture"
     },
     {
       src: nine,
       title: "Communication and Soft Skills",
       desc: "Communication and soft skills involve effective verbal and non-verbal interactions, teamwork, problem-solving and emotional intelligence.",
+      link: "/communication"
     },
     {
       src: ten,
       title: "Sports Education",
       desc: "Sports education covers athletic training, physical fitness, sports management, coaching techniques and game strategy.",
+      link:"/sports"
     },
     {
       src: eleven,
       title: "Computer Education",
       desc: "Computer education includes programming, software development, hardware maintenance, cybersecurity and digital literacy.",
+      link:"/computer"
     },
     {
       src: twelve,
       title: "Hospitality Education",
       desc: "Unlock your potential with our specialized hospitality education programs. Excel as a Receptionist, Office Administrator, or in Professional and Patient Customer Service.",
+      link: "/hospitality"
     },
     {
       src: thirteen,
       title: "Language School",
       desc: "Enhance fluency in various languages with immersive courses taught by expert instructors. Learn grammar, vocabulary, and pronunciation through interactive methods.",
+      link:"/language"
     },
   ];
 
@@ -100,9 +114,9 @@ function Hero() {
                     {data.title}
                   </h1>
                   <p className="text-xl p-3 my-2 md:text-2xl">{data.desc}</p>
-                  <button className="p-2 m-2 w-fit font-medium text-red-600 border-2 border-black active:bg-red-600 hover:bg-red-600 active:text-black active:border-none hover:text-black hover:border-none cursor-pointer md:text-2xl">
+                 <Link to={data.link}> <button className="p-2 m-2 w-fit font-medium text-red-600 border-2 border-black active:bg-red-600 hover:bg-red-600 active:text-black active:border-none hover:text-black hover:border-none cursor-pointer md:text-2xl">
                     Read More
-                  </button>
+                  </button></Link>
                 </div>
               </div>
             </>
