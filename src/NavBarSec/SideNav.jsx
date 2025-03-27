@@ -24,15 +24,15 @@ function SideNav() {
         </Link>
         <div className={`absolute  w-[250%] bg-[#192C57] m-1 p-1 z-10 border-transparent rounded-md  left-[-60%] ${isScrolled?"block":"hidden"}`}>
           <div className="flex flex-col gap-3  ">
-            <p className="text-normal  text-white active:bg-[#D94426] p-1  border-transparent rounded-md">
+           <Link to='/language'> <p className="text-normal  text-white active:bg-[#D94426] p-1  border-transparent rounded-md">
               Attestation
-            </p>
-            <p className="text-normal  text-white active:bg-[#D94426] p-1 border-transparent rounded-md">
+            </p></Link>
+          <Link to='/approval'> <p className="text-normal  text-white active:bg-[#D94426] p-1 border-transparent rounded-md">
               Approval Procedure
-            </p>
-            <p className="text-normal  text-white active:bg-[#D94426] p-1 border-transparent rounded-md">
+            </p></Link>
+           <Link to='/samplecertificate'> <p className="text-normal  text-white active:bg-[#D94426] p-1 border-transparent rounded-md">
               Sample Certificate
-            </p>
+            </p></Link>
           </div>
         </div>
         </div>
