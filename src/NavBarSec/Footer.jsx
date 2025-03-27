@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../images/logo.png'
+import { Link } from "react-router-dom";
 function Footer() {
   const course_data = [
     "Child Education",
@@ -16,20 +17,70 @@ function Footer() {
     "Hospitality Education",
     "Language School",
   ];
+  const Link_data=[
+    '/childeducation',
+    '/artanddesign',
+    '/healthscience',
+    '/mediaandcommunication',
+    "/beautician",
+    "/automobile",
+    "/firesafety" ,
+    "/agriculture",
+    "/communication" ,
+    "/sports",
+    "/computer",
+    "/hospitality",
+    "/language"
+
+  ]
+  const Linkpart1=[
+    '/childeducation',
+    '/artanddesign',
+    '/healthscience',
+    '/mediaandcommunication',
+    "/beautician",
+    "/automobile",
+    "/firesafety" 
+  ]
+  const Linkpart2=[
+    "/agriculture",
+    "/communication" ,
+    "/sports",
+    "/computer",
+    "/hospitality",
+    "/language"
+  ]
   const procedure_data = [
-    "Attestation",
-    "Approval Procedure",
-    "Sample Certificate",
-    "Apply Affiliation",
-    "Results",
-    "Downloads",
+    {path:"/language",
+      value: "Attestation"
+    },
+    {path:"/approval",
+      value:"Approval Procedure"
+    },    {path:"/samplecertificate" ,
+      value: "Sample Certificate"
+    },    {path:"/affliation",
+      value:"Apply Affiliation"
+    },    {path:"/result",
+      value:"Results"
+    },    {path:"/download",
+      value: "Downloads"
+    },
   ];
+  // const procedure_data = [
+  //   "Attestation",
+  //   "Approval Procedure",
+  //   "Sample Certificate",
+  //   "Apply Affiliation",
+  //   "Results",
+  //   "Downloads",
+  // ];
   const course_part1=[ "Child Education",
     "Arts and Design",
     "Health Sciences",
     "Media and Communication",
     "Beautician Education",
-    "Automobile Education","Fire & Safety"]
+    "Automobile Education",
+    "Fire & Safety"]
     const course_part2=[ 
       "Agriculture Education",
       "Communication and Soft Skills",
@@ -49,31 +100,31 @@ function Footer() {
       </div>
       <div className="flex flex-col gap-3 md:hidden">
         <h1 className="text-red-600 font-bold  border-t-2  hover:cursor-pointer border-transparent p-1 active:border-b-blue-900 hover:border-b-blue-900">Courses</h1>
-        {course_data.map(function (item) {
+        {course_data.map(function (item,index) {
           return (
-            <p className="text-blue-900 font-normal p-2  border border-transparent  hover:cursor-pointer active:bg-blue-950 hover:bg-blue-950 active:text-white hover:text-white active:border hover:border rounded-md">
-              {item}
-            </p>
+            <Link to={Link_data[index]}><p className="text-blue-900 font-normal p-2  border border-transparent  hover:cursor-pointer active:bg-blue-950 hover:bg-blue-950 active:text-white hover:text-white active:border hover:border rounded-md">
+            {item}
+          </p></Link>
           );
         })}
       </div>
       <div className=" hidden md:flex flex-col gap-3 md:w-[20%] ">
         <h1 className="text-red-600 font-bold border border-b-2 hover:cursor-pointer border-transparent p-1 active:border-b-blue-900 hover:border-b-blue-900">Courses</h1>
-        {course_part1.map(function (item) {
+        {course_part1.map(function (item,index) {
           return (
-            <p className="text-blue-900 font-normal p-2  border border-transparent hover:cursor-pointer active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:text-white  hover:border rounded-md">
-              {item}
-            </p>
+           <Link to={Linkpart1[index]}> <p className="text-blue-900 font-normal p-2  border border-transparent hover:cursor-pointer active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:text-white  hover:border rounded-md">
+           {item}
+         </p></Link>
           );
         })}
       </div>
       <div className=" hidden md:flex flex-col gap-3 md:w-[20%]">
         <h1 className="text-red-600 font-bold border border-b-2 hover:cursor-pointer border-transparent p-1 hover:border-b-blue-900">Courses</h1>
-        {course_part2.map(function (item) {
+        {course_part2.map(function (item,index) {
           return (
-            <p className="text-blue-900 font-normal p-2  border border-transparent hover:cursor-pointer active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:text-white  hover:border rounded-md">
-              {item}
-            </p>
+            <Link to={Linkpart2[index]} ><p className="text-blue-900 font-normal p-2  border border-transparent hover:cursor-pointer active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:text-white  hover:border rounded-md">
+            {item}
+          </p></Link>
           );
         })}
       </div>
@@ -82,17 +133,17 @@ function Footer() {
         <h1 className="text-red-600 font-bold border border-b-2 hover:cursor-pointer border-transparent p-1 active:border-b-blue-900 hover:border-b-blue-900">Procedure</h1>
         {procedure_data.map(function (item) {
           return (
-            <p className="text-blue-900 font-normal p-2  border border-transparent hover:cursor-pointer active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:text-white  hover:border rounded-md">
-              {item}
-            </p>
+           <Link  to={item.path} > <p className="text-blue-900 font-normal p-2  border border-transparent hover:cursor-pointer active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:text-white  hover:border rounded-md">
+           {item.value}
+         </p></Link>
           );
         })}
       </div>
       <div className="flex flex-col gap-3 md:w-[20%]">
         <h1 className="text-red-600 font-bold border border-b-2 hover:cursor-pointer border-transparent p-1 active:border-b-blue-900 hover:border-b-blue-900">Legal</h1>
-        <p className="text-blue-900 font-normal p-2  border border-transparent active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:cursor-pointer hover:text-white  hover:border rounded-md">
+       <Link to='/termsandcondition'> <p className="text-blue-900 font-normal p-2  border border-transparent active:bg-blue-950 active:text-white active:border hover:bg-blue-950 hover:cursor-pointer hover:text-white  hover:border rounded-md">
           Terms and Conditions
-        </p>
+        </p></Link>
       </div>
       <div className="flex flex-col gap-3 md:w-[20%]">
         <h1 className="text-red-600 font-bold border border-b-2 hover:cursor-pointer border-transparent p-1  active:border-b-blue-900 hover:border-b-blue-900">Follow Us</h1>

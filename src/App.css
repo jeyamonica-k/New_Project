@@ -1,10 +1,10 @@
 /* Navbar */
 
-.content{
+.content {
   display: none;
 }
 
-.procedure:hover .content{
+.procedure:hover .content {
   display: block;
 }
 
@@ -48,7 +48,8 @@
 }
 
 @keyframes moveBubble1 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0) translateY(0);
   }
   50% {
@@ -57,7 +58,8 @@
 }
 
 @keyframes moveBubble2 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0) translateY(0);
   }
   50% {
@@ -66,7 +68,8 @@
 }
 
 @keyframes moveBubble3 {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(0) translateY(0);
   }
   50% {
@@ -74,30 +77,26 @@
   }
 }
 
-
 /* ContactDetail */
 
-@media (min-width:1025px) {
-  .floating{
-    position:absolute;
+@media (min-width: 1025px) {
+  .floating {
+    position: absolute;
     width: 25%;
-    top:55%;
-    left:37%
-  
+    top: 55%;
+    left: 37%;
   }
 }
 
-
 /* AnimatedSection */
 
-.gradient-border{
+.gradient-border {
   border-bottom-width: 5px;
   border-bottom-style: solid;
-  border-image: linear-gradient(to right,red,rgb(244, 235, 235),white) 0.5;
+  border-image: linear-gradient(to right, red, rgb(244, 235, 235), white) 0.5;
 }
 
 /* ImageSlider */
-
 
 @keyframes fade-in-up {
   from {
@@ -114,12 +113,10 @@
   animation: fade-in-up 0.5s ease-out forwards;
 }
 
-
-
 /* Course-card */
 
 @media (max-width: 426px) {
-  .course-card{
+  .course-card {
     transition: all 0.5s ease-in-out;
     transform: scale(1);
   }
@@ -127,31 +124,57 @@
     transform: scale(1.05);
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.7);
   }
-  .course-card button:hover{
+  .course-card button:hover {
     background-color: #900000;
   }
-
 }
 
 /* Impact- Group */
 
-
 @media (max-width: 426px) {
-  .group h1:hover{
+  .group h1:hover {
     color: #1447e6;
   }
-  .group p:hover{
-    color:#C90007
+  .group p:hover {
+    color: #c90007;
   }
   .element {
     transform: scaleX(0) translateX(-100%);
     background-color: white;
     transition: transform 0.5s ease-in-out;
   }
-  
+
   .element.group:hover {
     transform: scaleX(1) translateX(0);
   }
-  
-  }
+}
 
+/* Termadcondition */
+.spacing li {
+  padding: 1%;
+}
+
+.font-control li {
+  padding: 1%;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@media (max-width: 321px) {
+  .spacing li {
+    font-size: 12px;
+  }
+  .font-control li {
+    font-size: 12px;
+  }
+  .heading {
+    font-size: 13px;
+  }
+}
+
+
+@media (max-width: 321px) {
+  .certificate_heading{
+    font-size: 16px;
+  }
+}

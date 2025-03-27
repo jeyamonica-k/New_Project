@@ -9,21 +9,21 @@ const course_images=[
     src:one,
     title:"Apply Affliation",
     desc:"Enhance your institution's credentials - Apply for affiliation with us today!",
-    Link:"/Affliation",
+    Link:"/affliation",
     btn:"Apply"
   },
   {
     src:two,
     title:"Results",
     desc:"Access your academic results here and stay updated on your progress.",
-    Link:"/Result",
+    Link:"/result",
     btn:"Results"
   },
   {
     src:three,
     title:"Downloads",
     desc:"Download your certifications, hall tickets, and enrollment forms all in one place.",
-    Link:"/Download",
+    Link:"/download",
     btn:"Downloads"
   }]
 
