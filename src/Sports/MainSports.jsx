@@ -3,7 +3,7 @@ import React from 'react'
 import Navbar_Section1 from "../NavBarSec/Navbar_Section1";
 import Footer from "../NavBarSec/Footer";
 import SportsTable from './SportsTable';
-import Sports from './SPorts';
+import Sports from './Sports';
 
 
 function MainSports() {
